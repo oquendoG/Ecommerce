@@ -1,0 +1,268 @@
+@charset "UTF-8";
+/**************************
+* Fuentes principales
+**************************/
+/*******************************
+* Tamaños de fuentes responsive
+********************************/
+/**************************
+* Paddings
+**************************/
+/* Definimos las Custom properties */
+:root {
+  /* Colores */
+  --negro: #393939;
+  /* Tipografía */
+  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-secundaria: Verdana;
+}
+
+/* (Opcional) Las adaptamos al modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --negro: #ececec;
+  }
+}
+/* (Opcional) Configuramos si un usuario ha activado el modo alto contraste. (WD) */
+/* (Opcional) Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+            animation: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+  display: block;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* (Opcional) */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* (Opcional) */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* (Opcional) Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* (Opcional) Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* (Opcional) */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--negro);
+  /* (Opcional) */
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  /* (Opcional) */
+  font-smooth: always;
+  /* (Opcional) */
+  -webkit-font-smoothing: antialiased;
+  /* (Opcional) */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  font-family: "Poppins, sans-serif";
+}
+
+body {
+  max-width: 1920px;
+  color: #2d313b;
+  padding: calc(0.5rem + 1.5625vw);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans, sans-serif";
+}
+
+h1 {
+  font-size: clamp(2.082rem, 0.2vw + 2.1rem, 2.242rem);
+  font-weight: 700;
+  margin-bottom: clamp(0.89rem, 0.868rem + 0.11vw, 1rem);
+}
+
+h2 {
+  font-size: clamp(1.842rem, 0.1vw + 1.8rem, 1.959rem);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: clamp(1.63rem, 0.1vw + 1.6rem, 1.713rem);
+  font-weight: 500;
+}
+
+h4 {
+  font-size: clamp(1.443rem, 0.1vw + 1.4rem, 1.497rem);
+  font-weight: 400;
+}
+
+h5 {
+  font-size: clamp(1.277rem, 0vw + 1.3rem, 1.309rem);
+  font-weight: 400;
+}
+
+h6 {
+  font-size: clamp(1.13rem, 0vw + 1.1rem, 1.144rem);
+  font-weight: 400;
+}
+
+p {
+  font-size: clamp(1rem, 0.1vw + 1rem, 1.063rem);
+}
+
+a {
+  font-size: clamp(1rem, 0.1vw + 1rem, 1.063rem);
+}
+a:hover {
+  color: #828d9a;
+}
+a:active {
+  color: #828d9a;
+}
+
+code {
+  white-space: pre;
+}
+
+input {
+  border-radius: 8px;
+  border: #828d9a;
+}
+input:focus {
+  border: 1px solid #2d313b;
+}
+input:disabled {
+  background: #a9b1bb;
+  color: #828d9a;
+}
+
+.o-container {
+  padding: calc(0.5rem + 1.5625vw);
+}
+
+.card {
+  border-radius: 8px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+  padding: calc(0.25rem + 0.78125vh), calc(0.5rem + 1.5625vw);
+  -webkit-transition: color 400ms ease-in;
+  transition: color 400ms ease-in;
+  -webkit-transition: background 400ms ease-in;
+  transition: background 400ms ease-in;
+}
+.button:hover, .button:focus {
+  background: #2d313b;
+  color: #f1f1ee;
+}
+
+/* You can add global styles to this file, and also import other style files */
