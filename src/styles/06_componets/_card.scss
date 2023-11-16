@@ -1,6 +1,7 @@
 @forward '../05_objects/objects';
+@use '../01_settings/shadows' as sh;
 
 .card{
   border-radius: 8px;
-  box-shadow: $main-shadow;
+  box-shadow: sh.$main-shadow;
 }

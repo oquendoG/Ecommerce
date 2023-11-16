@@ -1,5 +1,6 @@
 @forward '../04_elements/elements';
+@use '../01_settings/layout' as lay;
 
 .o-container {
-  padding: $main-padding;
+  padding: lay.$main-padding;
 }

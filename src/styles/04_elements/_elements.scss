@@ -1,12 +1,17 @@
-@use "../03_generic/generic" as gen;
+@forward "../03_generic/generic";
+@use "../01_settings/colors" as col;
+@use "../01_settings/layout" as lay;
+@use "../01_settings/fonts" as fnt;
+@use "../01_settings/borders" as bor;
 
 html {
-  font-family: gen.$_text-font;
+  font-family: fnt.$text-font;
 }
 
 body {
-  max-width: gen.$page-max-size;
-  color: $info;
+  max-width: lay.$page-max-size;
+  color: col.$info;
+  padding: lay.$main-padding;
 }
 
 h1,
@@ -15,51 +20,51 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: gen.$_header-font;
+  font-family: fnt.$header-font;
 }
 
 h1 {
-  font-size: gen.$h1;
+  font-size: fnt.$h1;
   font-weight: 700;
-  margin-bottom: $margin-bottom-headings;
+  margin-bottom: lay.$margin-bottom-headings;
 }
 
 h2 {
-  font-size: gen.$h2;
+  font-size: fnt.$h2;
   font-weight: 600;
 }
 
 h3 {
-  font-size: gen.$h3;
+  font-size: fnt.$h3;
   font-weight: 500;
 }
 
 h4 {
-  font-size: gen.$h4;
+  font-size: fnt.$h4;
   font-weight: 400;
 }
 
 h5 {
-  font-size: gen.$h5;
+  font-size: fnt.$h5;
   font-weight: 400;
 }
 
 h6 {
-  font-size: gen.$h6;
+  font-size: fnt.$h6;
   font-weight: 400;
 }
 
 p {
-  font-size: gen.$text;
+  font-size: fnt.$text;
 }
 
 a {
-  font-size: gen.$text;
+  font-size: fnt.$text;
   &:hover {
-    color: $primary;
+    color: col.$primary;
   }
   &:active {
-    color: $primary;
+    color: col.$primary;
   }
 }
 
@@ -68,15 +73,15 @@ code {
 }
 
 input {
-  border-radius: $radius-small;
-  border: $_border-color;
+  border-radius: bor.$radius-small;
+  border: bor.$border-color;
 
   &:focus {
-    border: $border-focus;
+    border: bor.$border-focus;
   }
 
   &:disabled {
-    background: $secondary;
-    color: $primary;
+    background: col.$secondary;
+    color: col.$primary;
   }
 }

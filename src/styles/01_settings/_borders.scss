@@ -1,8 +1,10 @@
+@use './colors' as col;
+
 //variables privadas
 $_radius-small: 8px;
 $_radius-medium: 25px;
-$_border-focus: 1px solid $info;
-$_border-color: $primary;
+$_border-focus: 1px solid col.$info;
+$_border-color: col.$primary;
 
 //variables públicas
 $radius-small: $_radius-small;

@@ -1,10 +1,14 @@
+@forward '../05_objects/objects';
+@use '../01_settings/colors' as col;
+@use '../01_settings/layout' as lay;
+
 .button{
-  padding: $button-padding;
+  padding: lay.$button-padding;
   transition: color 400ms ease-in;
   transition: background 400ms ease-in;
 
   &:hover, &:focus{
-    background: $info;
-    color: $ligth;
+    background: col.$info;
+    color: col.$ligth;
   }
 }
