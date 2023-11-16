@@ -1,0 +1,11 @@
+//variables privadas
+$_radius-small: 8px;
+$_radius-medium: 25px;
+$_border-focus: 1px solid $info;
+$_border-color: $primary;
+
+//variables públicas
+$radius-small: $_radius-small;
+$radius-medium: $_radius-medium;
+$border-color: $_border-color;
+$border-focus: $_border-focus;

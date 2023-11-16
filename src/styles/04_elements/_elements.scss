@@ -1,0 +1,82 @@
+@use "../03_generic/generic" as gen;
+
+html {
+  font-family: gen.$_text-font;
+}
+
+body {
+  max-width: gen.$page-max-size;
+  color: $info;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: gen.$_header-font;
+}
+
+h1 {
+  font-size: gen.$h1;
+  font-weight: 700;
+  margin-bottom: $margin-bottom-headings;
+}
+
+h2 {
+  font-size: gen.$h2;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: gen.$h3;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: gen.$h4;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: gen.$h5;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: gen.$h6;
+  font-weight: 400;
+}
+
+p {
+  font-size: gen.$text;
+}
+
+a {
+  font-size: gen.$text;
+  &:hover {
+    color: $primary;
+  }
+  &:active {
+    color: $primary;
+  }
+}
+
+code {
+  white-space: pre;
+}
+
+input {
+  border-radius: $radius-small;
+  border: $_border-color;
+
+  &:focus {
+    border: $border-focus;
+  }
+
+  &:disabled {
+    background: $secondary;
+    color: $primary;
+  }
+}

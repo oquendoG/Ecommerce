@@ -1,0 +1,15 @@
+/**************************
+* Paddings
+**************************/
+//variables privadas
+//Este es un padding responsive
+$_main-padding: calc(0.5rem + 1.5625vw);
+$_button-padding: calc(0.25rem + 0.78125vh), calc(0.5rem + 1.5625vw);
+$_margin-bottom-headings: clamp(0.89rem, 0.868rem + 0.11vw, 1rem);
+$_page-max-size: 1920px;
+
+//variables públicas
+$main-padding: $_main-padding;
+$button-padding: $_button-padding;
+$page-max-size: $_page-max-size;
+$margin-bottom-headings: $_margin-bottom-headings;

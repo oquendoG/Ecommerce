@@ -1,0 +1,10 @@
+.button{
+  padding: $button-padding;
+  transition: color 400ms ease-in;
+  transition: background 400ms ease-in;
+
+  &:hover, &:focus{
+    background: $info;
+    color: $ligth;
+  }
+}

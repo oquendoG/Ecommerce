@@ -1,0 +1,6 @@
+@forward '../05_objects/objects';
+
+.card{
+  border-radius: 8px;
+  box-shadow: $main-shadow;
+}

@@ -1,0 +1,35 @@
+/**************************
+* Fuentes principales
+**************************/
+//Variables privadas
+$_header-font: "Open Sans, sans-serif";
+$_text-font: "Poppins, sans-serif";
+
+//variables públicas
+$header-font: $_header-font;
+$text-font: $_text-font;
+
+/*******************************
+* Tamaños de fuentes responsive
+********************************/
+//Variables privadas
+$_h1: clamp(2.082rem, 0.2vw + 2.1rem, 2.242rem);
+$_h2: clamp(1.842rem, 0.1vw + 1.8rem, 1.959rem);
+$_h3: clamp(1.63rem, 0.1vw + 1.6rem, 1.713rem);
+$_h4: clamp(1.443rem, 0.1vw + 1.4rem, 1.497rem);
+$_h5: clamp(1.277rem, 0vw + 1.3rem, 1.309rem);
+$_h6: clamp(1.13rem, 0vw + 1.1rem, 1.144rem);
+$_text: clamp(1rem, 0.1vw + 1rem, 1.063rem);
+$_small: clamp(0.874rem, 0vw + 0.9rem, 0.885rem);
+$_smaller: clamp(0.874rem, -0.1vw + 0.9rem, 0.783rem);
+
+//variables públicas
+$h1: $_h1;
+$h2:$_h2;
+$h3:$_h3;
+$h4:$_h4;
+$h5:$_h5;
+$h6:$_h6;
+$text:$_text;
+$small:$_small;
+$smaller:$_smaller

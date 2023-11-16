@@ -1,0 +1,22 @@
+@forward '../01_settings/settings';
+// f = flex
+//g = grid
+@mixin f-center ($align-items: center) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: $align-items;
+}
+
+@mixin g-center ($place-items: center) {
+  place-items: $place-items;
+}
+
+@mixin container-height ($height: 100vh){
+  height: $height;
+}
+
+@mixin container-width ($width: 100%){
+  width: $width;
+}
+
