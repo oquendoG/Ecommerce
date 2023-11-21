@@ -1,1 +1,19 @@
 @forward '../06_componets/components';
+@use '../01_settings/fonts' as stt;
+@use '../02_tools/tools' as tl;
+
+.f-center {
+  @include tl.g-center;
+}
+
+.g-center{
+  @include tl.f-center;
+}
+
+.small {
+  font-size: stt.$small;
+}
+
+.smaller {
+  font-size: stt.$smaller;
+}

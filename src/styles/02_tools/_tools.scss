@@ -1,14 +1,23 @@
 @forward '../01_settings/settings';
 // f = flex
 //g = grid
-@mixin f-center ($align-items: center) {
+
+@mixin flex ($align-items: center, $justify-content: center, $flex-wrap: wrap) {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-wrap: $flex-wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin f-center ($align-items: center, $justify-content: center, $flex-wrap: wrap) {
+  display: flex;
+  flex-wrap: $flex-wrap;
+  justify-content: $justify-content;
   align-items: $align-items;
 }
 
 @mixin g-center ($place-items: center) {
+  display: grid;
   place-items: $place-items;
 }
 

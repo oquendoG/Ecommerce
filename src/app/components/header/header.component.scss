@@ -1,0 +1,5 @@
+@use '../../../styles/02_tools/tools' as tl;
+
+.main-header{
+  @include tl.flex($justify-content: space-between);
+}

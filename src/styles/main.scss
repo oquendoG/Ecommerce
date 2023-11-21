@@ -1,5 +1,5 @@
-@use './03_generic/generic';
-@use './04_elements/elements';
-@use './05_objects/objects';
-@use './06_componets/components';
-@use './07_utilities/utilities';
+@forward './03_generic/generic';
+@forward './04_elements/elements';
+@forward './05_objects/objects';
+@forward './06_componets/components';
+@forward './07_utilities/utilities';

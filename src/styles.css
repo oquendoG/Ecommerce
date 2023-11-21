@@ -170,7 +170,6 @@ html {
 body {
   max-width: 1920px;
   color: #2d313b;
-  padding: calc(0.5rem + 1.5625vw);
 }
 
 h1,
@@ -263,6 +262,34 @@ input:disabled {
 .button:hover, .button:focus {
   background: #2d313b;
   color: #f1f1ee;
+}
+
+.f-center {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.g-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.small {
+  font-size: clamp(0.874rem, 0vw + 0.9rem, 0.885rem);
+}
+
+.smaller {
+  font-size: clamp(0.874rem, -0.1vw + 0.9rem, 0.783rem);
 }
 
 /* You can add global styles to this file, and also import other style files */
