@@ -4,6 +4,11 @@
 @use "../01_settings/fonts" as fnt;
 @use "../01_settings/borders" as bor;
 
+
+::selection {
+  background-color: col.$warning;
+}
+
 html {
   font-family: fnt.$text-font;
 }
@@ -20,12 +25,12 @@ h4,
 h5,
 h6 {
   font-family: fnt.$header-font;
+  margin-bottom: lay.$general-margin-bottom;
 }
 
 h1 {
   font-size: fnt.$h1;
   font-weight: 700;
-  margin-bottom: lay.$margin-bottom-headings;
 }
 
 h2 {
@@ -55,6 +60,7 @@ h6 {
 
 p {
   font-size: fnt.$text;
+  margin-bottom: lay.$general-margin-bottom;
 }
 
 a {
@@ -73,7 +79,8 @@ code {
 
 input {
   border-radius: bor.$radius-small;
-  border: bor.$border-color;
+  border: 1px solid bor.$border-color;
+  padding: .44rem;
 
   &:focus {
     border: bor.$border-focus;
@@ -83,4 +90,8 @@ input {
     background: col.$secondary;
     color: col.$primary;
   }
+}
+
+button{
+  margin-bottom: lay.$general-margin-bottom;
 }

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+
 export type ButtonType = 'button' | 'submit';
 
 @Component({
@@ -12,6 +13,6 @@ export class ButtonComponent implements OnInit {
     this.type = 'button';
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
   }
 }

@@ -4,6 +4,9 @@
 
 .button{
   padding: lay.$button-padding;
+  border-radius: lay.$button-radius;
+  background-color: col.$primary;
+  color: col.$ligth;
   transition: color 400ms ease-in;
   transition: background 400ms ease-in;
 

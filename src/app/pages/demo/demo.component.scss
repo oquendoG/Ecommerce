@@ -1,0 +1,9 @@
+@use '../../../styles/02_tools/tools' as tl;
+
+.demo-menu{
+  @include tl.flex($justify-content: flex-start);
+}
+
+.demo-menu__link{
+  margin-right: 1rem;
+}
